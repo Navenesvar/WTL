@@ -1,0 +1,9 @@
+/* External css */
+.menu_list a{
+    margin: 1.2rem;
+    font-size: 24px;
+    color: rgb(82, 79, 79);
+  }
+  .menu_list a:hover{
+    color: #000;
+  }
