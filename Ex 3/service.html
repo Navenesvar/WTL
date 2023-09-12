@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        sub{
+            width: 20px;
+            height: 10px;
+        }
+    </style>
+    <script>
+        function fileValidation() {
+            var fileInput =
+                document.getElementById('myfile');
+             
+            var filePath = fileInput.value;
+         
+            // Allowing file type
+            var allowedExtensions =
+                    /(\.jpg|\.jpeg|\.png|\.txt)$/i;
+             
+            if (!allowedExtensions.exec(filePath)) {
+                alert('Invalid file type');
+                fileInput.value = '';
+                return false;
+            }
+            else
+            {
+                alert('Valid File type');
+                return true;
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center; margin-top: 50px;background-color: rgb(127, 241, 129);">
+    <h3>Write your detailed service needs for your travel in a text file and upload </h3>
+    <form  method="get" onsubmit="return fileValidation();">
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile"><br><br><br>
+        <input class="sub" type="submit" value="Submit" id="submit" >
+    </form>
+</body>
+</html>

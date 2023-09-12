@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Tourism</title>
+    <style>
+        label{
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function validform() {
+            var name = document.getElementById("name").value;
+            var ph = document.getElementById("phone").value;
+            var addr = document.getElementById("address").value;
+            var email = document.getElementById("email").value;
+            var r1 = document.getElementById("male");
+            var r2 = document.getElementById("female");
+            var r3 = document.getElementById("other");
+            const phoneNumberPattern = /^\d{10}$/;
+            var t = phoneNumberPattern.test(ph);
+
+            if (name === "" || ph === "" || addr === "" || email === "" || (!r1.checked && !r2.checked && !r3.checked)) {
+                alert("Invalid Input");
+                return false; // Prevent form submission if validation fails
+            }
+
+            if (name.length > 0 && t && email.indexOf("@") !== -1 && addr.length >= 10) {
+                alert("Valid Input");
+                return true; // Allow form submission if validation succeeds
+            } else {
+                alert("Invalid Input");
+                return false; // Prevent form submission if validation fails
+            }
+        }
+
+        function isValidPhoneNumber(phoneNumber) {
+            // Define a regular expression for a 10-digit phone number
+            const phoneNumberPattern = /^\d{10}$/;
+
+            // Test the phoneNumber against the pattern
+            return phoneNumberPattern.test(phoneNumber);
+        }
+    </script>
+</head>
+<body style="margin-top: 30px; background-color: rgb(0, 200, 255);">
+    <form style="text-align: center;" onsubmit="return validform()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="phone">Phone No</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="dob"/><br><br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address here"></textarea><br><br>
+        
+        <label> Gender:
+            <input type="radio" name="gender" id="male" value="male"> Male
+        </label>
+        
+        <label>
+            <input type="radio" name="gender" id="female" value="female"> Female
+        </label>
+        
+        <label>
+            <input type="radio" name="gender" id="other" value="other"> Other
+        </label><br><br>
+        
+        <label for="nation">Nationality:</label>
+        <select id="nation" name="indian" style="width: 200px; height: 45px; border-radius: 20px;">
+            <option value="indian">Indian</option>
+            <option value="lankan">Sri Lankan</option>
+            <option value="nepali">Nepali</option>
+            <option value="chinese">Chinese</option>
+            <option value="japanese">Japanese</option>
+        </select><br><br>
+        
+        <label for="email">EMAIL ID:</label>
+        <input type="text" name="email" id="email" /><br><br>
+        
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

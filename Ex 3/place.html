@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 2%;
+        }
+        label{
+            font-size: 25px;
+        }
+        .sub{
+            width:100px;
+            height: 15px;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function validcheck(){
+            // get the checkbox element from the DOM using the getElementId function
+            var c1=document.getElementById("choose1");
+            var c2=document.getElementById("choose2");
+            var c3=document.getElementById("choose3");
+            var c4=document.getElementById("choose4");
+            var c5=document.getElementById("choose5");
+            var c6=document.getElementById("choose6");
+           
+            // use the checked property to check if the checkbox is checked
+            if (c1.checked || c2.checked || c3.checked || c4.checked || c5.checked || c6.checked){
+                // display result by assigning to innerHTML of the text element.
+                alert("Thank you for choosing");
+                return true;
+            }
+            else{
+                alert("Please choose atleast one");
+                return false;
+            }
+                
+
+        }
+    </script>
+</head>
+<body style="background-color: rgb(249, 141, 128);">
+    <form name="myform" method="post" onsubmit="return validcheck()">
+        <label>Choose your favourite states</label><br><br>
+        <input type="checkbox" id="choose1" name="choose1"/>
+        <label for="choose1">Tamil Nadu</label><br>
+        <input type="checkbox" id="choose2" name="choose2"/>
+        <label for="choose1">Maharastra</label><br>
+        <input type="checkbox" id="choose3" name="choose3"/>
+        <label for="choose1">Delhi</label><br>
+        <input type="checkbox" id="choose4" name="choose4"/>
+        <label for="choose1">Rajasthan</label><br>
+        <input type="checkbox" id="choose5" name="choose5"/>
+        <label for="choose1">Kerala</label><br>
+        <input type="checkbox" id="choose6" name="choose6"/>
+        <label for="choose1">Odisa</label>
+        <br><br>
+        <input type="submit" value="Submit" class="sub"/>
+    </form>
+</body>
+</html>
