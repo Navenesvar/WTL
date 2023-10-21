@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        label{
+            font-size: 20px;
+        }
+        .centered-form {
+            width: 500px; /* Adjust the width as needed */
+            margin: 0 auto; /* Horizontally center */
+            padding: 20px; /* Add padding for spacing */
+        }
+
+    </style>
+</head>
+<body style="background-image: url('sky.jpg'); text-align: center;">
+    <h1>Explore India with us!</h1>
+    <h2>Registration Form</h2>
+    <form action="RegistrationServlet" method="post" class="centered-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="place">Place:</label>
+        <select id="place" name="place">
+            <option value="empty">--</option>
+            <option value="chennai">CHENNAI</option>
+            <option value="goa">GOA</option>
+            <option value="kolkata">KOLKATA</option>
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
