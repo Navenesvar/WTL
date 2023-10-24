@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;background-color: gold;">
+    <H1>Explore India!</H1>
+    <h1>Tour registeration</h1><hr>    
+    <!--Invoke marklist1 servlet to display all the students' marks-->
+    <a href="http://localhost:8080/Ex6/db1">Display all the details of the registered customers</a>
+    <hr>
+    <!-- On submit invoke marklist2 servlet to display mark details of specific dept students-->
+    <h3>View the places with registered customers</h3>
+    <form action="http://localhost:8080/Ex6/db2">
+        <!--Drop down selection-->
+        <label for="place">Place</label>
+        <select id="place" name="place">
+        <option value="empty">--</option>
+        <option value="chennai">CHENNAI</option>
+        <option value="goa">GOA</option>
+        <option value="kolkata">KOLKATA</option>
+        <br>
+        <br>
+        <input type="submit" value="SUBMIT"/>
+    </form>
+    <h2>Register?</h2>
+    <form action="http://localhost:8080/Ex6/db3" method="post">
+        <p>Name:</p> 
+        <!-- Create an element with mandatory name attribute,
+        so that data can be transfer to the servlet using getParameter() -->
+        <input type="text" name="name"/>
+        <p>Place:</p> 
+        <input type="text" name="place"/>
+        <p>Phone number:</p> 
+        <input type="text" name="phone"/>
+        <br/><br/>
+        <input type="submit" value="Register"/>
+    </form>
+</body>
+</html>
