@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indian_states>
+    <state>
+        <name>Tamil Nadu</name>
+        <places>
+            <place>Chennai</place>
+            <place>Madurai</place>
+            <place>Ooty</place>
+        </places>
+    </state>
+    <state>
+        <name>Karnataka</name>
+        <places>
+            <place>Bangalore</place>
+            <place>Mysore</place>
+            <place>Coorg</place>
+        </places>
+    </state>
+    <state>
+        <name>Rajasthan</name>
+        <places>
+            <place>Jaipur</place>
+            <place>Jodhpur</place>
+            <place>Udaipur</place>
+        </places>
+    </state>
+    <!-- Add more states and places as needed -->
+</indian_states>
