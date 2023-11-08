@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mixed Input Types Quiz</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:khaki;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mixed Input Types Quiz</h1>
+    <form action="ScoreServlet" method="post">
+        <div class="question">
+            <p>1. What is the capital of Andhra Pradesh?</p>
+            <input type="text" name="q1" required>
+        </div>
+
+        <div class="question">
+            <p>2. What is the capital of Karnataka?</p>
+            <input type="text" name="q2" required>
+        </div>
+
+        <div class="question">
+            <p>3. Which of these are states in South India?</p>
+            <input type="checkbox" name="q3a" value="kerala"> Kerala
+            <input type="checkbox" name="q3b" value="tamilnadu"> Tamil Nadu
+            <input type="checkbox" name="q3c" value="bihar"> Bihar
+            <input type="checkbox" name="q3d" value="haryana"> Haryana
+        </div>
+
+        <div class="question">
+            <p>4. Which of these cities is in Uttar Pradesh?</p>
+            <input type="radio" name="q4" value="lucknow"> Lucknow
+            <input type="radio" name="q4" value="mumbai"> Mumbai
+            <input type="radio" name="q4" value="chennai"> Chennai
+        </div>
+
+        <div class="question">
+            <p>5. Which state is known as the "Land of Five Rivers"?</p>
+            <input type="text" name="q5" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
